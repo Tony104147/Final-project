@@ -125,6 +125,7 @@
             echo '    text-align: left;';
             echo '}';
             echo '.form-grid input[type="text"] {';
+            echo '    width: 80px;';
             echo '    margin-left: 5px;'; // Adjust the margin as needed
             echo '}';
             echo '</style>';
