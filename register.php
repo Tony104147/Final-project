@@ -30,7 +30,7 @@
             // 是否有查詢到使用者記錄
             if ( $total_records == 0 ) {
                 // 帳號未註冊過,註冊帳號
-                $sql = "INSERT INTO Account VALUES(".$name.", ".$password.")";
+                $sql = "INSERT INTO account VALUES(".$name.", ".$password.")";
                 mysqli_query($link, $sql);
                 echo "<center><font color='red'>";
                 echo "註冊成功!<br/>";
@@ -43,6 +43,7 @@
                 echo "使用者名稱已註冊過!<br/>";
                 echo "</font>";
             }
+            mysqli_query($link, "commit;");
             mysqli_close($link);
         }
     ?>
