@@ -41,7 +41,8 @@
                 echo "密碼修改失敗!<br/>";
                 echo "</font>";
             }
-           mysqli_close($link); 
+            mysqli_query($link, "commit;");
+            mysqli_close($link); 
         }
     ?>
     <form method="post">
